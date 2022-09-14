@@ -1,5 +1,4 @@
-numbers = input().split()
-number_list = []
-for i in numbers :
-    number_list.append(int("".join(reversed(i))))
-print(max(number_list))
+a,b = input().split()
+a = int(a[::-1])
+b = int(b[::-1])
+print(max([a,b]))

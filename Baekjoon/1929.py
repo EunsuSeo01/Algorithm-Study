@@ -5,13 +5,13 @@ limit = int(N ** (1 / 2))
 composite_set = set()
 
 # 합성수의(소수가 아닌) 집합을 만들어주는 함수
-def make_prime_set(num: int):
+def make_composite_set(num: int):
     # num을 제외한 num의 배수를 합성수 집합에 추가
     composite_set.update({t for t in range(num, N + 1, num) if t != num})
 
 # 2부터 limit까지 돌면서 i를 제외한 i의 배수를 합성수 집합에 추가
 for i in range(2, limit + 1):
-    make_prime_set(i)
+    make_composite_set(i)
 
 # M 이상 N 이하 중 소수를 출력
 for i in range(M, N + 1):

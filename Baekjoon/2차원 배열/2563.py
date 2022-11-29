@@ -10,12 +10,10 @@ for _ in range(n):
     # -> 2차원 배열 형태를 띄게 됨.
     for i in range(1, 11):
         for j in range(1, 11):
-            dots.append([x + i, y + j])
+            # 애초부터 점의 위치를 tuple의 형태로 list에 넣는다.
+            # -> tuple은 immutable하기 때문에 tuple로 구성된 list는 set 함수의 인자가 될 수 있다.
+            dots.append((x + i, y + j))
 
 # 중복되는 점들만 제거하고 점의 개수를 세면 그것이 검은 영역의 넓이가 된다.
-# 중복되는 점을 제거하기 위해 set() 함수를 사용할 것인데, 2차원 list는 set 함수의 파라미터로 들어갈 수 없다.
-# 그렇기 때문에 2차원 list의 각 원소를 'immutable한 tuple의 형태'로 바꾸는 과정을 거쳐야 한다.
-dots_tuple = [tuple(i) for i in dots]  # [(1,2), (3,4), ...]
-
 # set을 통해 집합으로 변환하여 중복을 없애고 남은 점들의 개수를 센다. -> 답
-print(len(set(dots_tuple)))
+print(len(set(dots)))

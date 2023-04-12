@@ -4,7 +4,6 @@ a, b = map(int, input().split())
 # 두 수의 곱을 mul에 저장
 mul = a * b
 gcd = 0
-lcm = mul
 
 # 최대공약수 구하기
 while True:
@@ -18,10 +17,5 @@ while True:
         a = b
         b = n
 
-# 최소공배수 구하기
-# gcd가 1이면 처음 입력받은 두 값의 곱이 lcm이 된다
-if gcd != 1:
-    # 두 수의 곱은 최대공약수와 최소공배수의 곱과 같다
-    lcm = int(mul / gcd)
-
-print(f"{gcd}\n{lcm}")
+# 최소공배수 구하기 - 두 수의 곱은 최대공약수와 최소공배수의 곱과 같다
+print(f"{gcd}\n{mul // gcd}")

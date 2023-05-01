@@ -17,7 +17,7 @@ else:
     turn = 6
     while True:
         num += 1
-        if str(num).count("666") >= 1:
+        if '666' in str(num):
             turn += 1
             if turn == N:
                 print(num)

@@ -1,2 +1,2 @@
-# Python-Study
-자기주도적으로 파이썬을 공부하는 레포지토리
+# Algorithm-Study
+알고리즘 문제 풀이 레포지토리

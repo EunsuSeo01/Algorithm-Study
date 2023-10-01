@@ -2,7 +2,6 @@ import Foundation
 
 let t = Int(readLine()!)!
 var result = 0
-var isEnded = false
 
 func gcd(_ n1: Int, _ n2: Int) -> Int {
     if n2 == 0 {

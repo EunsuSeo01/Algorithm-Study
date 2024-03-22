@@ -11,9 +11,6 @@ for i in 1...N {
     queue.append(i)
 }
 
-var front = 0
-var rear = queue.count - 1
-
 while true {
     if numbers.isEmpty {
         break
